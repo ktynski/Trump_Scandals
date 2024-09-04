@@ -7,6 +7,7 @@
     <link href="https://visjs.github.io/vis-timeline/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: "Inter", sans-serif;
@@ -20,6 +21,14 @@
             height: 600px;
             border: 1px solid #ddd;
             background-color: white;
+        }
+        #chartContainer {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         #itemDetails {
             margin-bottom: 20px;
@@ -123,6 +132,9 @@
     <h1>Donald Trump's Controversial Actions Timeline</h1>
     <div id="itemDetails"></div>
     <div id="legend"></div>
+    <div id="chartContainer">
+        <canvas id="eventChart"></canvas>
+    </div>
     <div id="visualization"></div>
     <div id="controls">
         <div>
